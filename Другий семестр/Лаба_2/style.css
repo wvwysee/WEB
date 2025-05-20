@@ -1,0 +1,129 @@
+/* Загальні стилі */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Світліший фон */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Міжрядковий інтервал */
+}
+
+.app {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Сильніша тінь */
+    padding: 30px; /* Більший внутрішній відступ */
+}
+
+h1 {
+    text-align: center;
+    color: #24292e; /* Темніший колір заголовка */
+    margin-bottom: 30px; /* Більший відступ */
+    font-weight: 600; /* Жирний шрифт */
+    letter-spacing: -0.5px; /* Невеликий інтервал між літерами */
+}
+
+/* Елементи керування */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Розміщення елементів по краях */
+    align-items: center; /* Вирівнювання по вертикалі */
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 0 10px; /* Невеликий боковий відступ */
+}
+
+.controls input,
+.controls select {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #d1d5da; /* Світліша межа */
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06); /* Менша тінь */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    flex: 1; /* Розтягування на доступну ширину */
+    min-width: 150px; /* Мінімальна ширина */
+}
+
+.controls input:focus,
+.controls select:focus {
+    outline: none;
+    border-color: #2188ff; /* Яскравий колір при фокусі */
+    box-shadow: 0 0 8px rgba(33, 136, 255, 0.2);
+}
+
+/* Картки фільмів */
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Менша ширина карток */
+    gap: 25px;
+    padding: 20px 0; /* Вертикальний відступ */
+}
+
+.movie-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Тінь при наведенні */
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); /* Сильніша тінь при наведенні */
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e1e4e8; /* Світліша межа */
+}
+
+.movie-content {
+    padding: 15px;
+}
+
+.movie-content h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #24292e;
+    font-size: 1.1rem; /* Менший розмір заголовка */
+    font-weight: 500;
+}
+
+.movie-content p {
+    font-size: 0.9rem;
+    color: #586069; /* Світліший колір тексту */
+    margin-bottom: 8px;
+}
+
+.movie-info:last-child {
+    margin-bottom: 0; /* Прибираємо відступ у останнього параграфа */
+}
+
+.movie-info .rating {
+    font-weight: bold;
+    color: #d73a49; /* Червоний колір рейтингу */
+}
+
+/* Повідомлення про помилки */
+.error-message {
+    color: #cb2431;
+    background-color: #ffeef0;
+    border: 1px solid #f1f1f8;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column; /* Вертикальне розташування на малих екранах */
+        align-items: stretch; /* Розтягування на всю ширину */
+    }
+}

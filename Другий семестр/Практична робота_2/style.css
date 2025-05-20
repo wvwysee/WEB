@@ -1,0 +1,103 @@
+/* Загальні стилі */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Світліший фон */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px; /* Більший внутрішній відступ */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Сильніша тінь */
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50; /* Темно-синій заголовок */
+    margin-bottom: 30px; /* Більший відступ */
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* Стилі для блоку з результатами опитування */
+#surveyResult {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Менша внутрішня тінь */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: none; /* Залишаємо display: none */
+}
+
+#surveyResult h2 {
+    color: #34495e; /* Темніший колір заголовка */
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#surveyResult p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#surveyResult span {
+    font-weight: 600;
+    color: #24292e; /* Темніший колір тексту */
+}
+
+/* Стилі для кнопки */
+button {
+    background-color: #4CAF50; /* Зелений колір */
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover {
+    background-color: #45a049; /* Темніший зелений */
+    transform: scale(1.02); /* Невелике збільшення при наведенні */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь при наведенні */
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #surveyResult h2 {
+        font-size: 1.4rem;
+    }
+
+    #surveyResult p {
+        font-size: 1rem;
+    }
+}

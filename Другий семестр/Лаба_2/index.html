@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фільмова база</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>🎬 Фільмова база</h1>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Пошук за назвою..." />
+
+      <select id="sortSelect">
+        <option value="">Сортувати</option>
+        <option value="name">За назвою (А-Я)</option>
+        <option value="rating">За рейтингом (↓)</option>
+      </select>
+
+      <select id="genreSelect">
+        <option value="">Усі жанри</option>
+      </select>
+    </div>
+
+    <div id="moviesContainer" class="movies-container">
+      <!-- Тут будуть картки фільмів -->
+    </div>
+
+    <div id="errorMessage" class="error-message"></div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
